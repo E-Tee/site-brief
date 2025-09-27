@@ -31,7 +31,7 @@ body {
 /*global*/
 
 .container {
-    max-width: 1690px;
+    max-width: 480px;
     width: 100%;
     margin: 0 auto;
 }

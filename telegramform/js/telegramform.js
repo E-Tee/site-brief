@@ -1,5 +1,5 @@
 (function ($) {
-  $(".contact-form").submit(function (event) {
+  $(".contact__form, .info__form, .netproject__form, .target__form, .design__form, .support__form,  .materials__form, .budget__form").submit(function (event) {
     event.preventDefault();
 
     // Сообщения формы
@@ -8,7 +8,7 @@
     let requiredFieldsText = "Заполните поля с именем и телефоном";
 
     // Сохраняем в переменную класс с параграфом для вывода сообщений об отправке
-    let message = $(this).find(".contact-form__message");
+    let message = $(this).find(".brief__form__message");
 
     let form = $("#" + $(this).attr("id"))[0];
     let fd = new FormData(form);
