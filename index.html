@@ -17,7 +17,7 @@
         <div class="container">
             <h1>Бриф на разработку сайта</h1>
             <form id="brief" method="POST" class="brief__form" autocomplete="off" enctype="multipart/form-data">
-                <!--Контакты клиента-->
+                <!--Контакты клиента - обязательные поля-->
                 <div class="brief__form-section">
                     <h2 class="section-title">Контакты и общая информация (заполнить обязательно)</h2>
                     <div class="field">
@@ -62,7 +62,10 @@
                         <p class="field__title required">Основные задачи (пронумеровать в порядке приоритетности)</p>
                         <textarea class="textarea" required></textarea>
                     </div>
+                    <!--Кнопка отправки формы-->
+                    <button type="submit" class="brief__form-button">Отправить</button>
                 </div>
+
                 <!-- Основная информация о компании -->
                 <div class="brief__form-section">
                     <h2 class="section-title">Основная информация о компании</h2>
