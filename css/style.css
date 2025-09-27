@@ -1,3 +1,7 @@
+:root {
+    --gap: 30px;
+}
+
 html {
     box-sizing: border-box;
 }
@@ -19,9 +23,43 @@ img {
 
 body {
     min-width: 320px;
+    background-color: #242834;
     font-family: 'font', sans-serif;
+    color: #f4f4f4;
 }
 
+/*global*/
+
+.container {
+    max-width: 1690px;
+    width: 100%;
+    margin: 0 auto;
+}
+
+.btn--reset {
+    padding: 0;
+    border: none;
+    background-color: transparent;
+    cursor: pointer;
+}
+
+.flex {
+    display: flex;
+}
+
+/*buttons*/
+
+.nav__wrapper {
+    justify-content: flex-start;
+    gap: var(--gap);
+    flex-wrap: wrap;
+}
+
+.nav__btn {
+    padding: 10px 20px;
+    border-radius: 7px;
+    background: linear-gradient(90deg, #B6FF00 0%, #6D9900 100%);
+}
 
 .form--section {
     display: none;
