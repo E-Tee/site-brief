@@ -1,7 +1,32 @@
-    .form--section {
-        display: none;
-    }
+html {
+    box-sizing: border-box;
+}
 
-    .form--section.active {
-        display: block;
-    }
+*,
+*::before,
+*::after {
+    box-sizing: inherit;
+}
+
+a {
+    color: inherit;
+    text-decoration: none;
+}
+
+img {
+    max-width: 100%;
+}
+
+body {
+    min-width: 320px;
+    font-family: 'font', sans-serif;
+}
+
+
+.form--section {
+    display: none;
+}
+
+.form--section.active {
+    display: block;
+}
