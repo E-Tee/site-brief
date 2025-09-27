@@ -1,0 +1,339 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" brief__form__section="width=device-width, initial-scale=1.0">
+    <meta name="description" brief__form__section="Бриф на разработку сайта">
+    <meta name="author" brief__form__section="Дмитрий Бастич">
+    <title>Бриф на разработку сайта</title>
+
+    <link rel="stylesheet" href="css/style.css">
+
+</head>
+
+<body>
+    <main>
+        <div class="container">
+            <h1>Бриф на разработку сайта</h1>
+            <form id="brief" method="POST" class="brief__form" autocomplete="off" enctype="multipart/form-data">
+                <!-- Основная информация о компании -->
+                <div class="brief__form__section">
+                    <h2 class="section-title">Основная информация о компании</h2>
+
+                    <div class="field">
+                        <p class="field__title required">Название организации</p>
+                        <input type="text" class="input" required>
+                    </div>
+
+                    <div class="field">
+                        <p class="field__title">Адрес сайта (если есть)</p>
+                        <input type="text" class="input">
+                    </div>
+
+                    <div class="field">
+                        <p class="field__title">Другие сайты компании (если есть)</p>
+                        <input type="text" class="input">
+                    </div>
+
+                    <div class="field">
+                        <p class="field__title required">Сфера деятельности компании</p>
+                        <input type="text" class="input" required>
+                    </div>
+
+                    <div class="field">
+                        <p class="field__title">Позиционирование на рынке</p>
+                        <input type="text" class="input">
+                    </div>
+
+                    <div class="field">
+                        <p class="field__title">Основные конкуренты (названия, адреса сайтов)</p>
+                        <textarea class="textarea"></textarea>
+                    </div>
+
+                    <div class="field">
+                        <p class="field__title">Сильные и слабые стороны конкурентов (цены, качество, продвижение,
+                            сервис)</p>
+                        <textarea class="textarea"></textarea>
+                    </div>
+
+                    <div class="field">
+                        <p class="field__title">Дополнительная информация об организации и проекте</p>
+                        <textarea class="textarea"></textarea>
+                    </div>
+                </div>
+
+                <!-- Информация об интернет-проекте -->
+                <div class="brief__form__section">
+                    <h2 class="section-title">Информация об интернет-проекте</h2>
+
+                    <div class="field">
+                        <p class="field__title required">Предполагаемый тип сайта</p>
+                        <select class="input select" required>
+                            <option value=""></option>
+                            <option value="сайт-холдинга">Сайт холдинга</option>
+                            <option value="сайт-компании">Сайт компании</option>
+                            <option value="сайт-продукта">Сайт продукта / направления</option>
+                            <option value="интернет-магазин">Интернет-магазин</option>
+                            <option value="сайт-акции">Сайт акции</option>
+                            <option value="сайт-события">Сайт события</option>
+                            <option value="СМИ">СМИ, информационный портал</option>
+                            <option value="интранет">Интранет-портал</option>
+                            <option value="сервис">Сервис</option>
+                            <option value="другое">Другое</option>
+                        </select>
+                    </div>
+
+                    <div class="field">
+                        <p class="field__title">Доменное имя сайта (если несколько, перечислите через запятую)</p>
+                        <input type="text" class="input">
+                    </div>
+
+                    <div class="field">
+                        <p class="field__title">Дата запуска нового сайта</p>
+                        <input type="text" class="input">
+                    </div>
+
+                    <div class="field">
+                        <p class="field__title required">Основные задачи (пронумеровать в порядке приоритетности)</p>
+                        <textarea class="textarea" required></textarea>
+                    </div>
+
+                    <div class="field">
+                        <p class="field__title">Продвигаемые продукты и услуги (включая названия брендов и торговых
+                            марок)</p>
+                        <textarea class="textarea"></textarea>
+                    </div>
+
+                    <div class="field">
+                        <p class="field__title">Форма и способы реализации (опт, розница, под заказ; доставка
+                            покупателю, фирменные
+                            магазины, розничные сети, дилеры, пр.)</p>
+                        <textarea class="textarea"></textarea>
+                    </div>
+
+                    <div class="field">
+                        <p class="field__title">Характеристики товаров и услуг (потребительские свойства, особенности и
+                            преимущества)</p>
+                        <textarea class="textarea"></textarea>
+                    </div>
+
+                    <div class="field">
+                        <p class="field__title">Преимущества перед конкурентами (особенности производства, качество,
+                            распространение, сервис)</p>
+                        <textarea class="textarea"></textarea>
+                    </div>
+                </div>
+
+                <!-- Целевая аудитория -->
+                <div class="brief__form__section">
+                    <h2 class="section-title">Целевая аудитория</h2>
+
+                    <div class="field">
+                        <p class="field__title">Сегмент, на который ориентирована коммуникация</p>
+                        <select class="input select">
+                            <option value=""></option>
+                            <option value="b2c">B2C Частные лица</option>
+                            <option value="b2b">B2B Юридические лица</option>
+                        </select>
+                    </div>
+
+                    <div class="field">
+                        <p class="field__title">Основная аудитория сайта (определите целевые группы, на которые должен
+                            быть
+                            ориентирован Ваш веб-сайт, и значимость каждой группы)</p>
+                        <textarea class="textarea"></textarea>
+                    </div>
+
+                    <div class="field">
+                        <p class="field__title">Портрет потребителя (пол, возраст, уровень дохода, положение, должность,
+                            пр.)</p>
+                        <textarea class="textarea"></textarea>
+                    </div>
+
+                    <div class="field">
+                        <p class="field__title">Аргументы в поддержку основной идеи (почему посетитель должен поверить
+                            вам)</p>
+                        <textarea class="textarea"></textarea>
+                    </div>
+
+                    <div class="field">
+                        <p class="field__title">Ожидаемое поведение пользователя на сайте</p>
+                        <textarea class="textarea"></textarea>
+                    </div>
+                </div>
+
+                <!-- Дизайн и креатив -->
+                <div class="brief__form__section">
+                    <h2 class="section-title">Дизайн и креатив</h2>
+
+                    <div class="field">
+                        <p class="field__title">Общие пожелания по стилю: цветовая гамма, расположение элементов</p>
+                        <textarea class="textarea"></textarea>
+                    </div>
+
+                    <div class="field">
+                        <p class="field__title">Описание внешнего вида - эскизы. Какие эмоции должен вызывать сайт</p>
+                        <textarea class="textarea"></textarea>
+                    </div>
+
+                    <div class="field">
+                        <p class="field__title">Типовая структура страницы, размещение блоков на ней</p>
+                        <textarea class="textarea"></textarea>
+                    </div>
+
+                    <div class="field">
+                        <p class="field__title">Примеры сайтов, которые не нравятся с точки зрения дизайна. Указать чем
+                            не нравятся
+                        </p>
+                        <textarea class="textarea"></textarea>
+                    </div>
+
+                    <div class="field">
+                        <p class="field__title">Сайты, которые производят благоприятное впечатление (адрес сайта и по
+                            возможности
+                            описать что нравится)</p>
+                        <textarea class="textarea"></textarea>
+                    </div>
+
+                    <div class="field">
+                        <p class="field__title">Сайты, которые не производят благоприятное впечатление (адрес сайта и по
+                            возможности
+                            описать что не нравится)</p>
+                        <textarea class="textarea"></textarea>
+                    </div>
+                </div>
+
+                <!-- Функционал и поддержка сайта -->
+                <div class="brief__form__section">
+                    <h2 class="section-title">Функционал и поддержка сайта</h2>
+
+                    <div class="field">
+                        <p class="field__title">Названия обязательных разделов сайта (Ориентировочная структура сайта)
+                        </p>
+                        <textarea class="textarea"></textarea>
+                    </div>
+
+                    <div class="field">
+                        <p class="field__title">Языковые версии сайта (русский, английский, другие)</p>
+                        <input type="text" class="input">
+                    </div>
+
+                    <div class="field">
+                        <p class="field__title">Планируемые программные модули</p>
+                        <textarea class="textarea"></textarea>
+                    </div>
+
+                    <div class="field">
+                        <p class="field__title">Регулярность обновления информации на сайте</p>
+                        <input type="text" class="input">
+                    </div>
+
+                    <div class="field">
+                        <p class="field__title">Проведение обновлений сайта (свой специалист, сторонняя организация,
+                            разработчик и
+                            т.д.)</p>
+                        <input type="text" class="input">
+                    </div>
+
+                    <div class="field">
+                        <p class="field__title">Наличие пресс-службы (для подготовки новостей, взаимодействия с прессой)
+                        </p>
+                        <input type="text" class="input">
+                    </div>
+
+                    <div class="field">
+                        <p class="field__title">Дополнительно (Дополнения, замечания, пожелания)</p>
+                        <textarea class="textarea"></textarea>
+                    </div>
+                </div>
+
+                <!-- Дополнительные материалы -->
+                <div class="brief__form__section">
+                    <h2 class="section-title">Дополнительные материалы</h2>
+
+                    <div class="field">
+                        <p class="field__title">Фотографии по продукту</p>
+                        <select class="input select">
+                            <option value=""></option>
+                            <option value="готово">Да, всё готово!</option>
+                            <option value="нужна-обработка">Есть, но нужна обработка</option>
+                            <option value="предоставим">Предоставим, в процессе</option>
+                            <option value="нужен-фотограф">Нужен фотограф</option>
+                            <option value="не-будет">Фотографий не будет</option>
+                        </select>
+                    </div>
+
+                    <div class="field">
+                        <p class="field__title">Фотографии команды</p>
+                        <select class="input select">
+                            <option value=""></option>
+                            <option value="готово">Да, всё готово!</option>
+                            <option value="нужна-обработка">Есть, но нужна обработка</option>
+                            <option value="предоставим">Предоставим, в процессе</option>
+                            <option value="нужен-фотограф">Нужен фотограф</option>
+                            <option value="не-будет">Фотографий не будет</option>
+                        </select>
+                    </div>
+
+                    <div class="field">
+                        <p class="field__title">Фотографии производства или процесса</p>
+                        <select class="input select">
+                            <option value=""></option>
+                            <option value="готово">Да, всё готово!</option>
+                            <option value="нужна-обработка">Есть, но нужна обработка</option>
+                            <option value="предоставим">Предоставим, в процессе</option>
+                            <option value="нужен-фотограф">Нужен фотограф</option>
+                            <option value="не-будет">Фотографий не будет</option>
+                        </select>
+                    </div>
+
+                    <div class="field">
+                        <p class="field__title">Видеоролик</p>
+                        <input type="text" class="input">
+                    </div>
+
+                    <div class="field">
+                        <p class="field__title">Тексты, презентации, буклеты о продукте/услуге и компании</p>
+                        <select class="input select">
+                            <option value=""></option>
+                            <option value="есть">Есть</option>
+                            <option value="готовим">Готовим</option>
+                            <option value="нет">Ничего нет</option>
+                        </select>
+                    </div>
+                </div>
+
+                <!-- Бюджет и сроки -->
+                <div class="brief__form__section">
+                    <h2 class="section-title">Бюджет и сроки</h2>
+
+                    <div class="field">
+                        <p class="field__title">Планируемый бюджет</p>
+                        <input type="text" class="input">
+                    </div>
+
+                    <div class="field">
+                        <p class="field__title">Наличие технического задания</p>
+                        <input type="text" class="input">
+                    </div>
+
+                    <div class="field">
+                        <p class="field__title">Требуется ли администрирование после запуска</p>
+                        <select class="input select">
+                            <option value=""></option>
+                            <option value="да">Да</option>
+                            <option value="нет">Нет</option>
+                        </select>
+                    </div>
+                </div>
+
+                <button type="submit" class="button">Отправить бриф</button>
+            </form>
+        </div>
+    </main>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <script src="/telegramform/js/telegramform.js"></script>
+</body>
+
+</html>
