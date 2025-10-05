@@ -12,440 +12,500 @@
 </head>
 
 <body>
-    <main>
+    <header>
         <div class="container">
-            <h1 class="brief__title">Бриф на разработку сайта</h1>
+            <div class="header__content flex">
 
-            <div class="wrapper flex">
-                <!--Кнопки секций-->
-                <div class="form--toggle flex nav__wrapper">
-                    <button class="active btn--reset flex nav__btn" data-form="callback-form">Заполнить
-                        обязательно</button>
-                    <button class="btn--reset flex nav__btn" data-form="info-form">Основная информация о
-                        компании</button>
-                    <button class="btn--reset flex nav__btn" data-form="netproject-form">Информация об
-                        интернет-проекте</button>
-                    <button class="btn--reset flex nav__btn" data-form="target-form">Целевая аудитория</button>
-                    <button class="btn--reset flex nav__btn" data-form="design-form">Дизайн и креатив</button>
-                    <button class="btn--reset flex nav__btn" data-form="support-form">Функционал и поддержка
-                        сайта</button>
-                    <button class="btn--reset flex nav__btn" data-form="materials-form">Дополнительные
-                        материалы</button>
-                    <button class="btn--reset flex nav__btn" data-form="budget-form">Бюджет и сроки</button>
-                </div>
+                <!-- Бургер-меню -->
+                <div class="burger-menu">
+                    <a href="" class="burger-menu_button">
+                        <spun class="burger-menu_lines"></spun>
+                    </a>
+                    <nav class="burger-menu_nav nav__wrapper"> <button class="active btn--reset flex nav__btn"
+                            data-form="callback-form">Заполнить
+                            обязательно</button>
+                        <button class="btn--reset flex nav__btn" data-form="info-form">Основная информация о
+                            компании</button>
+                        <button class="btn--reset flex nav__btn" data-form="netproject-form">Информация об
+                            интернет-проекте</button>
+                        <button class="btn--reset flex nav__btn" data-form="target-form">Целевая аудитория</button>
+                        <button class="btn--reset flex nav__btn" data-form="design-form">Дизайн и креатив</button>
+                        <button class="btn--reset flex nav__btn" data-form="support-form">Функционал и поддержка
+                            сайта</button>
+                        <button class="btn--reset flex nav__btn" data-form="materials-form">Дополнительные
+                            материалы</button>
+                        <button class="btn--reset flex nav__btn" data-form="budget-form">Бюджет и сроки</button>
 
-                <!--Контакты клиента - обязательные поля-->
-                <div id="callback-form" class="form--section active">
-                    <div class="form--wrapper">
-                        <form id="form-contact" method="POST" class="contact__form brief__form" autocomplete="off"
-                            enctype="multipart/form-data">
-                            <h2 class="form--section__title">Контакты и общая информация</h2>
-                            <div class="preloader"></div>
-                            <p class="brief__form__message"></p>
-
-                            <div class="field">
-                                <p class="field__title required">Имя</p>
-                                <input type="text" class="brief__form--input" placeholder="Введите ваше имя" required>
-                            </div>
-                            <div class="field">
-                                <p class="field__title required">Email</p>
-                                <input type="email" class="brief__form--input" placeholder="Введите email" required>
-                            </div>
-                            <div class="field">
-                                <p class="field__title required">Телефон</p>
-                                <input type="tel" class="brief__form--input" placeholder="Введите ваш телефон" required>
-                            </div>
-                            <div class="field">
-                                <p class="field__title required">Название организации</p>
-                                <input type="text" class="brief__form--input" placeholder="Введите название организации"
-                                    required>
-                            </div>
-                            <div class="field">
-                                <p class="field__title required">Сфера деятельности компании</p>
-                                <input type="text" class="brief__form--input"
-                                    placeholder="Введите сферу деятельности компании" required>
-                            </div>
-                            <div class="field">
-                                <p class="field__title required">Предполагаемый тип сайта</p>
-                                <select class="brief__form--select" required>
-                                    <option value=""></option>
-                                    <option value="сайт-холдинга">Сайт холдинга</option>
-                                    <option value="сайт-компании">Сайт компании</option>
-                                    <option value="сайт-продукта">Сайт продукта / направления</option>
-                                    <option value="интернет-магазин">Интернет-магазин</option>
-                                    <option value="сайт-акции">Сайт акции</option>
-                                    <option value="сайт-события">Сайт события</option>
-                                    <option value="СМИ">СМИ, информационный портал</option>
-                                    <option value="интранет">Интранет-портал</option>
-                                    <option value="сервис">Сервис</option>
-                                    <option value="другое">Другое</option>
-                                </select>
-                            </div>
-                            <div class="field">
-                                <p class="field__title required">Основные задачи (пронумеровать в порядке
-                                    приоритетности)
-                                </p>
-                                <textarea class="brief__form--textarea" required></textarea>
-                            </div>
-
-                            <!--Кнопка отправки формы-->
-                            <button type="submit" class="brief__form--button btn--reset">Отправить</button>
-                        </form>
-                    </div>
-                </div>
-
-                <!-- Основная информация о компании -->
-                <div id="info-form" class="form--section">
-                    <div class="form--wrapper">
-                        <form id="form-info" method="POST" class="info__form brief__form" autocomplete="off">
-                            <h2 class="form--section__title">Основная информация о компании</h2>
-                            <div class="preloader"></div>
-                            <p class="brief__form__message"></p>
-                            <div class="field">
-                                <p class="field__title">Адрес сайта (если есть)</p>
-                                <input type="text" class="brief__form--input">
-                            </div>
-                            <div class="field">
-                                <p class="field__title">Другие сайты компании (если есть)</p>
-                                <input type="text" class="brief__form--input">
-                            </div>
-                            <div class="field">
-                                <p class="field__title">Позиционирование на рынке</p>
-                                <input type="text" class="brief__form--input">
-                            </div>
-                            <div class="field">
-                                <p class="field__title">Основные конкуренты (названия, адреса сайтов)</p>
-                                <textarea class="brief__form--textarea"></textarea>
-                            </div>
-                            <div class="field">
-                                <p class="field__title">Сильные и слабые стороны конкурентов (цены, качество,
-                                    продвижение,
-                                    сервис)</p>
-                                <textarea class="brief__form--textarea"></textarea>
-                            </div>
-                            <div class="field">
-                                <p class="field__title">Дополнительная информация об организации и проекте</p>
-                                <textarea class="brief__form--textarea"></textarea>
-                            </div>
-                            <!--Кнопка отправки формы-->
-                            <button type="submit" class="brief__form--button">Отправить</button>
-                        </form>
-                    </div>
-                </div>
-
-                <!-- Информация об интернет-проекте -->
-                <div id="netproject-form" class="form--section">
-                    <div class="form--wrapper">
-                        <form id="form-netproject" method="POST" class="netproject__form brief__form"
-                            autocomplete="off">
-                            <h2 class="form--section__title">Информация об интернет-проекте</h2>
-                            <div class="preloader"></div>
-                            <p class="brief__form__message"></p>
-                            <div class="field">
-                                <p class="field__title">Доменное имя сайта (если несколько, перечислите через запятую)
-                                </p>
-                                <input type="text" class="brief__form--input">
-                            </div>
-                            <div class="field">
-                                <p class="field__title">Дата запуска нового сайта</p>
-                                <input type="text" class="brief__form--input">
-                            </div>
-                            <div class="field">
-                                <p class="field__title">Продвигаемые продукты и услуги (включая названия брендов и
-                                    торговых
-                                    марок)</p>
-                                <textarea class="brief__form--textarea"></textarea>
-                            </div>
-                            <div class="field">
-                                <p class="field__title">Форма и способы реализации (опт, розница, под заказ; доставка
-                                    покупателю, фирменные
-                                    магазины, розничные сети, дилеры, пр.)</p>
-                                <textarea class="brief__form--textarea"></textarea>
-                            </div>
-                            <div class="field">
-                                <p class="field__title">Характеристики товаров и услуг (потребительские свойства,
-                                    особенности и
-                                    преимущества)</p>
-                                <textarea class="brief__form--textarea"></textarea>
-                            </div>
-                            <div class="field">
-                                <p class="field__title">Преимущества перед конкурентами (особенности производства,
-                                    качество,
-                                    распространение, сервис)</p>
-                                <textarea class="brief__form--textarea"></textarea>
-                            </div>
-                            <!--Кнопка отправки формы-->
-                            <button type="submit" class="brief__form--button">Отправить</button>
-                        </form>
-                    </div>
-                </div>
-
-                <!-- Целевая аудитория -->
-                <div id="target-form" class="form--section">
-                    <div class="form--wrapper">
-                        <form id="form-target" method="POST" class="target__form brief__form" autocomplete="off">
-                            <h2 class="form--section__title">Целевая аудитория</h2>
-                            <div class="preloader"></div>
-                            <p class="brief__form__message"></p>
-                            <div class="field">
-                                <p class="field__title">Сегмент, на который ориентирована коммуникация</p>
-                                <select class="brief__form--select">
-                                    <option value=""></option>
-                                    <option value="b2c">B2C Частные лица</option>
-                                    <option value="b2b">B2B Юридические лица</option>
-                                </select>
-                            </div>
-
-                            <div class="field">
-                                <p class="field__title">Основная аудитория сайта (определите целевые группы, на которые
-                                    должен
-                                    быть
-                                    ориентирован Ваш веб-сайт, и значимость каждой группы)</p>
-                                <textarea class="brief__form--textarea"></textarea>
-                            </div>
-
-                            <div class="field">
-                                <p class="field__title">Портрет потребителя (пол, возраст, уровень дохода, положение,
-                                    должность,
-                                    пр.)</p>
-                                <textarea class="brief__form--textarea"></textarea>
-                            </div>
-
-                            <div class="field">
-                                <p class="field__title">Аргументы в поддержку основной идеи (почему посетитель должен
-                                    поверить
-                                    вам)</p>
-                                <textarea class="brief__form--textarea"></textarea>
-                            </div>
-
-                            <div class="field">
-                                <p class="field__title">Ожидаемое поведение пользователя на сайте</p>
-                                <textarea class="brief__form--textarea"></textarea>
-                            </div>
-                            <!--Кнопка отправки формы-->
-                            <button type="submit" class="brief__form--button">Отправить</button>
-                        </form>
-                    </div>
-                </div>
-
-                <!-- Дизайн и креатив -->
-                <div id="design-form" class="form--section">
-                    <div class="form--wrapper">
-                        <form id="form-design" method="POST" class="design__form brief__form" autocomplete="off">
-                            <h2 class="form--section__title">Дизайн и креатив</h2>
-                            <div class="preloader"></div>
-                            <p class="brief__form__message"></p>
-                            <div class="field">
-                                <p class="field__title">Общие пожелания по стилю: цветовая гамма, расположение элементов
-                                </p>
-                                <textarea class="brief__form--textarea"></textarea>
-                            </div>
-
-                            <div class="field">
-                                <p class="field__title">Описание внешнего вида - эскизы. Какие эмоции должен вызывать
-                                    сайт
-                                </p>
-                                <textarea class="brief__form--textarea"></textarea>
-                            </div>
-
-                            <div class="field">
-                                <p class="field__title">Типовая структура страницы, размещение блоков на ней</p>
-                                <textarea class="brief__form--textarea"></textarea>
-                            </div>
-
-                            <div class="field">
-                                <p class="field__title">Примеры сайтов, которые не нравятся с точки зрения дизайна.
-                                    Указать
-                                    чем
-                                    не нравятся
-                                </p>
-                                <textarea class="brief__form--textarea"></textarea>
-                            </div>
-
-                            <div class="field">
-                                <p class="field__title">Сайты, которые производят благоприятное впечатление (адрес сайта
-                                    и
-                                    по
-                                    возможности
-                                    описать что нравится)</p>
-                                <textarea class="brief__form--textarea"></textarea>
-                            </div>
-
-                            <div class="field">
-                                <p class="field__title">Сайты, которые не производят благоприятное впечатление (адрес
-                                    сайта
-                                    и по
-                                    возможности
-                                    описать что не нравится)</p>
-                                <textarea class="brief__form--textarea"></textarea>
-                            </div>
-                            <!--Кнопка отправки формы-->
-                            <button type="submit" class="brief__form--button">Отправить</button>
-                        </form>
-                    </div>
-                </div>
-
-                <!-- Функционал и поддержка сайта -->
-                <div id="support-form" class="form--section">
-                    <div class="form--wrapper">
-                        <form id="form-support" method="POST" class="support__form brief__form" autocomplete="off">
-                            <h2 class="form--section__title">Функционал и поддержка сайта</h2>
-                            <div class="preloader"></div>
-                            <p class="brief__form__message"></p>
-                            <div class="field">
-                                <p class="field__title">Названия обязательных разделов сайта (Ориентировочная структура
-                                    сайта)
-                                </p>
-                                <textarea class="brief__form--textarea"></textarea>
-                            </div>
-
-                            <div class="field">
-                                <p class="field__title">Языковые версии сайта (русский, английский, другие)</p>
-                                <input type="text" class="brief__form--input">
-                            </div>
-
-                            <div class="field">
-                                <p class="field__title">Планируемые программные модули</p>
-                                <textarea class="brief__form--textarea"></textarea>
-                            </div>
-
-                            <div class="field">
-                                <p class="field__title">Регулярность обновления информации на сайте</p>
-                                <input type="text" class="brief__form--input">
-                            </div>
-
-                            <div class="field">
-                                <p class="field__title">Проведение обновлений сайта (свой специалист, сторонняя
-                                    организация,
-                                    разработчик и
-                                    т.д.)</p>
-                                <input type="text" class="brief__form--input">
-                            </div>
-
-                            <div class="field">
-                                <p class="field__title">Наличие пресс-службы (для подготовки новостей, взаимодействия с
-                                    прессой)
-                                </p>
-                                <input type="text" class="brief__form--input">
-                            </div>
-
-                            <div class="field">
-                                <p class="field__title">Дополнительно (Дополнения, замечания, пожелания)</p>
-                                <textarea class="brief__form--textarea"></textarea>
-                            </div>
-                            <!--Кнопка отправки формы-->
-                            <button type="submit" class="brief__form--button">Отправить</button>
-                        </form>
-                    </div>
-                </div>
-
-                <!-- Дополнительные материалы -->
-                <div id="materials-form" class="form--section">
-                    <div class="form--wrapper">
-                        <form id="form-materials" method="POST" class="materials__form brief__form" autocomplete="off">
-                            <h2 class="form--section__title">Дополнительные материалы</h2>
-                            <div class="preloader"></div>
-                            <p class="brief__form__message"></p>
-                            <div class="field">
-                                <p class="field__title">Фотографии по продукту</p>
-                                <select class="brief__form--select">
-                                    <option value=""></option>
-                                    <option value="готово">Да, всё готово!</option>
-                                    <option value="нужна-обработка">Есть, но нужна обработка</option>
-                                    <option value="предоставим">Предоставим, в процессе</option>
-                                    <option value="нужен-фотограф">Нужен фотограф</option>
-                                    <option value="не-будет">Фотографий не будет</option>
-                                </select>
-                            </div>
-
-                            <div class="field">
-                                <p class="field__title">Фотографии команды</p>
-                                <select class="brief__form--select">
-                                    <option value=""></option>
-                                    <option value="готово">Да, всё готово!</option>
-                                    <option value="нужна-обработка">Есть, но нужна обработка</option>
-                                    <option value="предоставим">Предоставим, в процессе</option>
-                                    <option value="нужен-фотограф">Нужен фотограф</option>
-                                    <option value="не-будет">Фотографий не будет</option>
-                                </select>
-                            </div>
-
-                            <div class="field">
-                                <p class="field__title">Фотографии производства или процесса</p>
-                                <select class="brief__form--select">
-                                    <option value=""></option>
-                                    <option value="готово">Да, всё готово!</option>
-                                    <option value="нужна-обработка">Есть, но нужна обработка</option>
-                                    <option value="предоставим">Предоставим, в процессе</option>
-                                    <option value="нужен-фотограф">Нужен фотограф</option>
-                                    <option value="не-будет">Фотографий не будет</option>
-                                </select>
-                            </div>
-
-                            <div class="field">
-                                <p class="field__title">Видеоролик</p>
-                                <input type="text" class="brief__form--input">
-                            </div>
-
-                            <div class="field">
-                                <p class="field__title">Тексты, презентации, буклеты о продукте/услуге и компании</p>
-                                <select class="brief__form--select">
-                                    <option value=""></option>
-                                    <option value="есть">Есть</option>
-                                    <option value="готовим">Готовим</option>
-                                    <option value="нет">Ничего нет</option>
-                                </select>
-                            </div>
-                            <!--Кнопка отправки формы-->
-                            <button type="submit" class="brief__form--button">Отправить</button>
-                        </form>
-                    </div>
-                </div>
-
-                <!-- Бюджет и сроки -->
-                <div id="budget-form" class="form--section">
-                    <div class="form--wrapper">
-                        <form id="form-budget" method="POST" class="budget__form brief__form" autocomplete="off">
-                            <h2 class="form--section__title">Бюджет и сроки</h2>
-                            <div class="preloader"></div>
-                            <p class="brief__form__message"></p>
-
-                            <div class="field">
-                                <p class="field__title">Планируемый бюджет</p>
-                                <input type="text" class="brief__form--input">
-                            </div>
-
-                            <div class="field">
-                                <p class="field__title">Наличие технического задания</p>
-                                <input type="text" class="brief__form--input">
-                            </div>
-
-                            <div class="field">
-                                <p class="field__title">Требуется ли администрирование после запуска</p>
-                                <select class="brief__form--select">
-                                    <option value=""></option>
-                                    <option value="да">Да</option>
-                                    <option value="нет">Нет</option>
-                                </select>
-                            </div>
-                            <!--Кнопка отправки формы-->
-                            <button type="submit" class="brief__form--button">Отправить</button>
-                        </form>
-                    </div>
+                    </nav>
+                    <div class="burger-menu_overlay"></div>
                 </div>
             </div>
         </div>
+
+    </header>
+    <main>
+        <div class="container">
+            <!--Контакты клиента - обязательные поля-->
+            <div id="callback-form" class="form--section active">
+                <div class="form--wrapper">
+                    <form id="form-contact" method="POST" class="contact__form brief__form" autocomplete="off"
+                        enctype="multipart/form-data">
+                        <h2 class="form--section__title">Контакты и общая информация</h2>
+                        <div class="preloader"></div>
+                        <p class="brief__form__message"></p>
+
+                        <div class="field">
+                            <p class="field__title required">Имя</p>
+                            <input type="text" name="name" class="brief__form--input" placeholder="Введите ваше имя"
+                                required>
+                        </div>
+                        <div class="field">
+                            <p class="field__title required">Email</p>
+                            <input type="email" name="email" class="brief__form--input" placeholder="Введите email"
+                                required>
+                        </div>
+                        <div class="field">
+                            <p class="field__title required">Телефон</p>
+                            <input type="tel" name="phone" class="brief__form--input" placeholder="Введите ваш телефон"
+                                required>
+                        </div>
+                        <div class="field">
+                            <p class="field__title required">Название организации</p>
+                            <input type="text" name="organization" class="brief__form--input"
+                                placeholder="Введите название организации" required>
+                        </div>
+                        <div class="field">
+                            <p class="field__title required">Сфера деятельности компании</p>
+                            <input type="text" name="activity" class="brief__form--input"
+                                placeholder="Введите сферу деятельности компании" required>
+                        </div>
+                        <div class="field">
+                            <p class="field__title required">Предполагаемый тип сайта</p>
+                            <select name="site_type" class="brief__form--select" required>
+                                <option value=""></option>
+                                <option value="сайт-холдинга">Сайт холдинга</option>
+                                <option value="сайт-компании">Сайт компании</option>
+                                <option value="сайт-продукта">Сайт продукта / направления</option>
+                                <option value="интернет-магазин">Интернет-магазин</option>
+                                <option value="сайт-акции">Сайт акции</option>
+                                <option value="сайт-события">Сайт события</option>
+                                <option value="СМИ">СМИ, информационный портал</option>
+                                <option value="интранет">Интранет-портал</option>
+                                <option value="сервис">Сервис</option>
+                                <option value="другое">Другое</option>
+                            </select>
+                        </div>
+                        <div class="field">
+                            <p class="field__title required">Основные задачи (пронумеровать в порядке
+                                приоритетности)</p>
+                            <textarea name="tasks" class="brief__form--textarea" required></textarea>
+                        </div>
+
+                        <!--Кнопка отправки формы-->
+                        <button type="submit" class="brief__form--button btn--reset">Отправить</button>
+                    </form>
+                </div>
+            </div>
+
+
+            <!-- Основная информация о компании -->
+            <div id="info-form" class="form--section">
+                <div class="form--wrapper">
+                    <form id="form-info" method="POST" class="info__form brief__form" autocomplete="off">
+                        <h2 class="form--section__title">Основная информация о компании</h2>
+                        <div class="preloader"></div>
+                        <p class="brief__form__message"></p>
+                        <div class="field">
+                            <p class="field__title">Адрес сайта (если есть)</p>
+                            <input type="text" name="website_address" class="brief__form--input">
+                        </div>
+                        <div class="field">
+                            <p class="field__title">Другие сайты компании (если есть)</p>
+                            <input type="text" name="other_websites" class="brief__form--input">
+                        </div>
+                        <div class="field">
+                            <p class="field__title">Позиционирование на рынке</p>
+                            <input type="text" name="market_positioning" class="brief__form--input">
+                        </div>
+                        <div class="field">
+                            <p class="field__title">Основные конкуренты (названия, адреса сайтов)</p>
+                            <textarea name="competitors" class="brief__form--textarea"></textarea>
+                        </div>
+                        <div class="field">
+                            <p class="field__title">Сильные и слабые стороны конкурентов (цены, качество,
+                                продвижение,
+                                сервис)</p>
+                            <textarea name="competitors_analysis" class="brief__form--textarea"></textarea>
+                        </div>
+                        <div class="field">
+                            <p class="field__title">Дополнительная информация об организации и проекте</p>
+                            <textarea name="additional_info" class="brief__form--textarea"></textarea>
+                        </div>
+                        <!--Кнопка отправки формы-->
+                        <button type="submit" class="brief__form--button btn--reset">Отправить</button>
+                    </form>
+                </div>
+            </div>
+
+            <!-- Информация об интернет-проекте -->
+            <div id="netproject-form" class="form--section">
+                <div class="form--wrapper">
+                    <form id="form-netproject" method="POST" class="netproject__form brief__form" autocomplete="off">
+                        <h2 class="form--section__title">Информация об интернет-проекте</h2>
+                        <div class="preloader"></div>
+                        <p class="brief__form__message"></p>
+                        <div class="field">
+                            <p class="field__title">Доменное имя сайта (если несколько, перечислите через запятую)
+                            </p>
+                            <input type="text" name="domain_names" class="brief__form--input">
+                        </div>
+                        <div class="field">
+                            <p class="field__title">Дата запуска нового сайта</p>
+                            <input type="text" name="launch_date" class="brief__form--input">
+                        </div>
+                        <div class="field">
+                            <p class="field__title">Продвигаемые продукты и услуги (включая названия брендов и
+                                торговых
+                                марок)</p>
+                            <textarea name="products_services" class="brief__form--textarea"></textarea>
+                        </div>
+                        <div class="field">
+                            <p class="field__title">Форма и способы реализации (опт, розница, под заказ; доставка
+                                покупателю, фирменные
+                                магазины, розничные сети, дилеры, пр.)</p>
+                            <textarea name="sales_methods" class="brief__form--textarea"></textarea>
+                        </div>
+                        <div class="field">
+                            <p class="field__title">Характеристики товаров и услуг (потребительские свойства,
+                                особенности и
+                                преимущества)</p>
+                            <textarea name="product_characteristics" class="brief__form--textarea"></textarea>
+                        </div>
+                        <div class="field">
+                            <p class="field__title">Преимущества перед конкурентами (особенности производства,
+                                качество,
+                                распространение, сервис)</p>
+                            <textarea name="competitive_advantages" class="brief__form--textarea"></textarea>
+                        </div>
+                        <!--Кнопка отправки формы-->
+                        <button type="submit" class="brief__form--button">Отправить</button>
+                    </form>
+                </div>
+            </div>
+
+            <!-- Целевая аудитория -->
+            <div id="target-form" class="form--section">
+                <div class="form--wrapper">
+                    <form id="form-target" method="POST" class="target__form brief__form" autocomplete="off">
+                        <h2 class="form--section__title">Целевая аудитория</h2>
+                        <div class="preloader"></div>
+                        <p class="brief__form__message"></p>
+                        <div class="field">
+                            <p class="field__title">Сегмент, на который ориентирована коммуникация</p>
+                            <select name="target_segment" class="brief__form--select">
+                                <option value=""></option>
+                                <option value="b2c">B2C Частные лица</option>
+                                <option value="b2b">B2B Юридические лица</option>
+                            </select>
+                        </div>
+
+                        <div class="field">
+                            <p class="field__title">Основная аудитория сайта (определите целевые группы, на которые
+                                должен
+                                быть
+                                ориентирован Ваш веб-сайт, и значимость каждой группы)</p>
+                            <textarea name="target_audience" class="brief__form--textarea"></textarea>
+                        </div>
+
+                        <div class="field">
+                            <p class="field__title">Портрет потребителя (пол, возраст, уровень дохода, положение,
+                                должность,
+                                пр.)</p>
+                            <textarea name="consumer_portrait" class="brief__form--textarea"></textarea>
+                        </div>
+
+                        <div class="field">
+                            <p class="field__title">Аргументы в поддержку основной идеи (почему посетитель должен
+                                поверить
+                                вам)</p>
+                            <textarea name="supporting_arguments" class="brief__form--textarea"></textarea>
+                        </div>
+
+                        <div class="field">
+                            <p class="field__title">Ожидаемое поведение пользователя на сайте</p>
+                            <textarea name="expected_behavior" class="brief__form--textarea"></textarea>
+                        </div>
+                        <!--Кнопка отправки формы-->
+                        <button type="submit" class="brief__form--button">Отправить</button>
+                    </form>
+                </div>
+            </div>
+
+            <!-- Дизайн и креатив -->
+            <div id="design-form" class="form--section">
+                <div class="form--wrapper">
+                    <form id="form-design" method="POST" class="design__form brief__form" autocomplete="off">
+                        <h2 class="form--section__title">Дизайн и креатив</h2>
+                        <div class="preloader"></div>
+                        <p class="brief__form__message"></p>
+                        <div class="field">
+                            <p class="field__title">Общие пожелания по стилю: цветовая гамма, расположение элементов
+                            </p>
+                            <textarea name="style_preferences" class="brief__form--textarea"></textarea>
+                        </div>
+
+                        <div class="field">
+                            <p class="field__title">Описание внешнего вида - эскизы. Какие эмоции должен вызывать
+                                сайт
+                            </p>
+                            <textarea name="visual_description" class="brief__form--textarea"></textarea>
+                        </div>
+
+                        <div class="field">
+                            <p class="field__title">Типовая структура страницы, размещение блоков на ней</p>
+                            <textarea name="page_structure" class="brief__form--textarea"></textarea>
+                        </div>
+
+                        <div class="field">
+                            <p class="field__title">Примеры сайтов, которые не нравятся с точки зрения дизайна.
+                                Указать
+                                чем
+                                не нравятся
+                            </p>
+                            <textarea name="disliked_examples" class="brief__form--textarea"></textarea>
+                        </div>
+
+                        <div class="field">
+                            <p class="field__title">Сайты, которые производят благоприятное впечатление (адрес сайта
+                                и
+                                по
+                                возможности
+                                описать что нравится)</p>
+                            <textarea name="liked_examples" class="brief__form--textarea"></textarea>
+                        </div>
+
+                        <div class="field">
+                            <p class="field__title">Сайты, которые не производят благоприятное впечатление (адрес
+                                сайта
+                                и по
+                                возможности
+                                описать что не нравится)</p>
+                            <textarea name="unfavorable_examples" class="brief__form--textarea"></textarea>
+                        </div>
+                        <!--Кнопка отправки формы-->
+                        <button type="submit" class="brief__form--button">Отправить</button>
+                    </form>
+                </div>
+            </div>
+
+            <!-- Функционал и поддержка сайта -->
+            <div id="support-form" class="form--section">
+                <div class="form--wrapper">
+                    <form id="form-support" method="POST" class="support__form brief__form" autocomplete="off">
+                        <h2 class="form--section__title">Функционал и поддержка сайта</h2>
+                        <div class="preloader"></div>
+                        <p class="brief__form__message"></p>
+                        <div class="field">
+                            <p class="field__title">Названия обязательных разделов сайта (Ориентировочная структура
+                                сайта)
+                            </p>
+                            <textarea name="required_sections" class="brief__form--textarea"></textarea>
+                        </div>
+
+                        <div class="field">
+                            <p class="field__title">Языковые версии сайта (русский, английский, другие)</p>
+                            <input type="text" name="language_versions" class="brief__form--input">
+                        </div>
+
+                        <div class="field">
+                            <p class="field__title">Планируемые программные модули</p>
+                            <textarea name="software_modules" class="brief__form--textarea"></textarea>
+                        </div>
+
+                        <div class="field">
+                            <p class="field__title">Регулярность обновления информации на сайте</p>
+                            <input type="text" name="update_frequency" class="brief__form--input">
+                        </div>
+
+                        <div class="field">
+                            <p class="field__title">Проведение обновлений сайта (свой специалист, сторонняя
+                                организация,
+                                разработчик и
+                                т.д.)</p>
+                            <input type="text" name="update_management" class="brief__form--input">
+                        </div>
+
+                        <div class="field">
+                            <p class="field__title">Наличие пресс-службы (для подготовки новостей, взаимодействия с
+                                прессой)
+                            </p>
+                            <input type="text" name="press_service" class="brief__form--input">
+                        </div>
+
+                        <div class="field">
+                            <p class="field__title">Дополнительно (Дополнения, замечания, пожелания)</p>
+                            <textarea name="additional_notes" class="brief__form--textarea"></textarea>
+                        </div>
+                        <!--Кнопка отправки формы-->
+                        <button type="submit" class="brief__form--button">Отправить</button>
+                    </form>
+                </div>
+            </div>
+
+            <!-- Дополнительные материалы -->
+            <div id="materials-form" class="form--section">
+                <div class="form--wrapper">
+                    <form id="form-materials" method="POST" class="materials__form brief__form" autocomplete="off">
+                        <h2 class="form--section__title">Дополнительные материалы</h2>
+                        <div class="preloader"></div>
+                        <p class="brief__form__message"></p>
+                        <div class="field">
+                            <p class="field__title">Фотографии по продукту</p>
+                            <select name="product_photos" class="brief__form--select">
+                                <option value=""></option>
+                                <option value="готово">Да, всё готово!</option>
+                                <option value="нужна-обработка">Есть, но нужна обработка</option>
+                                <option value="предоставим">Предоставим, в процессе</option>
+                                <option value="нужен-фотограф">Нужен фотограф</option>
+                                <option value="не-будет">Фотографий не будет</option>
+                            </select>
+                        </div>
+
+                        <div class="field">
+                            <p class="field__title">Фотографии команды</p>
+                            <select name="team_photos" class="brief__form--select">
+                                <option value=""></option>
+                                <option value="готово">Да, всё готово!</option>
+                                <option value="нужна-обработка">Есть, но нужна обработка</option>
+                                <option value="предоставим">Предоставим, в процессе</option>
+                                <option value="нужен-фотограф">Нужен фотограф</option>
+                                <option value="не-будет">Фотографий не будет</option>
+                            </select>
+                        </div>
+
+                        <div class="field">
+                            <p class="field__title">Фотографии производства или процесса</p>
+                            <select name="production_photos" class="brief__form--select">
+                                <option value=""></option>
+                                <option value="готово">Да, всё готово!</option>
+                                <option value="нужна-обработка">Есть, но нужна обработка</option>
+                                <option value="предоставим">Предоставим, в процессе</option>
+                                <option value="нужен-фотограф">Нужен фотограф</option>
+                                <option value="не-будет">Фотографий не будет</option>
+                            </select>
+                        </div>
+
+                        <div class="field">
+                            <p class="field__title">Видеоролик</p>
+                            <input type="text" name="video" class="brief__form--input">
+                        </div>
+
+                        <div class="field">
+                            <p class="field__title">Тексты, презентации, буклеты о продукте/услуге и компании</p>
+                            <select name="text_materials" class="brief__form--select">
+                                <option value=""></option>
+                                <option value="есть">Есть</option>
+                                <option value="готовим">Готовим</option>
+                                <option value="нет">Ничего нет</option>
+                            </select>
+                        </div>
+                        <!--Кнопка отправки формы-->
+                        <button type="submit" class="brief__form--button">Отправить</button>
+                    </form>
+                </div>
+            </div>
+
+            <!-- Бюджет и сроки -->
+            <div id="budget-form" class="form--section">
+                <div class="form--wrapper">
+                    <form id="form-budget" method="POST" class="budget__form brief__form" autocomplete="off">
+                        <h2 class="form--section__title">Бюджет и сроки</h2>
+                        <div class="preloader"></div>
+                        <p class="brief__form__message"></p>
+
+                        <div class="field">
+                            <p class="field__title">Планируемый бюджет</p>
+                            <input type="text" name="budget" class="brief__form--input">
+                        </div>
+
+                        <div class="field">
+                            <p class="field__title">Наличие технического задания</p>
+                            <input type="text" name="technical_specification" class="brief__form--input">
+                        </div>
+
+                        <div class="field">
+                            <p class="field__title">Требуется ли администрирование после запуска</p>
+                            <select name="administration_required" class="brief__form--select">
+                                <option value=""></option>
+                                <option value="да">Да</option>
+                                <option value="нет">Нет</option>
+                            </select>
+                        </div>
+                        <!--Кнопка отправки формы-->
+                        <button type="submit" class="brief__form--button">Отправить</button>
+                    </form>
+                </div>
+            </div>
+
+        </div>
     </main>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
-    <script src="/telegramform/js/telegramform.js"></script>
+    <script src="telegramform/js/telegramform.js"></script>
     <script>
         // Переключение между формами
-        $('.form--toggle button').on('click', function () {
+        $('.nav__btn').on('click', function () {
             const formId = $(this).data('form');
-            $('.form--toggle button').removeClass('active');
+            $('.nav__btn').removeClass('active');
             $(this).addClass('active');
             $('.form--section').removeClass('active');
             $('#' + formId).addClass('active');
+
+            // Закрываем бургер-меню после выбора формы на мобильных устройствах
+            if ($(window).width() <= 768) {
+                $('.burger-menu').removeClass('burger-menu_active');
+                $('body').css('overflow', 'visible');
+            }
+        });
+
+        function burgerMenu(selector) {
+            let menu = $(selector);
+            let button = menu.find('.burger-menu_button');
+            let links = menu.find('.nav__btn');
+            let overlay = menu.find('.burger-menu_overlay');
+
+            button.on('click', (e) => {
+                e.preventDefault();
+                toggleMenu();
+            });
+
+            links.on('click', () => {
+                // Закрываем меню после выбора пункта на мобильных
+                if ($(window).width() <= 768) {
+                    toggleMenu();
+                }
+            });
+
+            overlay.on('click', () => toggleMenu());
+
+            function toggleMenu() {
+                menu.toggleClass('burger-menu_active');
+
+                if (menu.hasClass('burger-menu_active')) {
+                    $('body').css('overflow', 'hidden');
+                } else {
+                    $('body').css('overflow', 'visible');
+                }
+            }
+        }
+
+        burgerMenu('.burger-menu');
+
+        // Закрытие меню при изменении размера окна (если перешли на десктоп)
+        $(window).on('resize', function () {
+            if ($(window).width() > 768) {
+                $('.burger-menu').removeClass('burger-menu_active');
+                $('body').css('overflow', 'visible');
+            }
         });
     </script>
 </body>
